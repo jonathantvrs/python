@@ -13,6 +13,8 @@ for movie in my_movies_list:
 hp1 = Movie('Harry Potter and the Philosopher\'s Stone', \
     'Chris Columbus')
 
-# Print True because the __eq__ method has been implemented for comparison 
-print(hp1 in my_movies_list)
+# Print True because the __eq__ method has been implemented for comparison
+# The in operator is based on the == operator 
+print(hp1 in my_movies_list) # print True
+print(hp1 == my_movies_list[0]) # print True
 
