@@ -9,3 +9,8 @@ class Movie:
     def __eq__(self, another_movie):
         return self.name == another_movie.name and \
             self.director == another_movie.director
+
+    def __ne__(self, another_movie):
+        return self.name != another_movie.name or \
+            self.director != another_movie.director
+        
