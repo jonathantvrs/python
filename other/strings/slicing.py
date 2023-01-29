@@ -12,6 +12,13 @@ print (midname)
 
 # using find method
 url = 'https://alura.com.br/busca?query=python'
+# sanitizing (removing whitespaces) with replace method
+# url = url.replace(' ', '')
+# sanitizing (removing whitespaces) with strip method
+url = url.strip()
+
+if url == '':
+    raise ValueError('The url is empty!')
 
 question_mark_index = url.find('?')
 # 0-? (question mark not inclusive)
