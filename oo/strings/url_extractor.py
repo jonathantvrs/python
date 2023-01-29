@@ -47,3 +47,9 @@ class URLExtractor:
 
     def __len__(self):
         return len(self.__url)
+
+    def __str__(self):
+        return self.__url
+
+    def __eq__(self, other):
+        return self.__url == other.__url
