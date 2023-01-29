@@ -1,14 +1,25 @@
+import re
+
 class URLExtractor:
     def __init__(self, url):
         self.__url = self.__sanitize_url(url)
         self.__validate_url()
 
     def __sanitize_url(self, url):
-        return url.strip()
+        if type(url) == str:
+            return url.strip()
+        else:
+            return ''
 
     def __validate_url(self):
-        if self.__url == '':
+        if not self.__url:
             raise ValueError('The url is empty!')
+
+        url_pattern = re.compile('(http(s)?://)?(www.)?bytebank.com(.br)?/cambio')
+        match = url_pattern.match(self.__url)
+
+        if not match:
+            raise ValueError("The url is not valid!")
 
     def get_base_url(self):
         question_mark_index = self.__url.find('?')
@@ -33,3 +44,6 @@ class URLExtractor:
             value = self.get_params_url()[value_index:e_commercial_index]
 
         return value
+
+    def __len__(self):
+        return len(self.__url)

@@ -1,7 +1,7 @@
 from url_extractor import URLExtractor
 
 
-url = URLExtractor('https://google.com/search?q=python&sId=1233423123')
+url = URLExtractor('https://bytebank.com/cambio?q=python&sId=1233423123')
 
 print(url.get_base_url())
 print(url.get_params_url())
