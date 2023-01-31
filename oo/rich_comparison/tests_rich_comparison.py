@@ -17,4 +17,6 @@ hp1 = Movie('Harry Potter and the Philosopher\'s Stone', \
 # The in operator is based on the == operator 
 print(hp1 in my_movies_list) # print True
 print(hp1 == my_movies_list[0]) # print True
+print(hp1 == my_movies_list[1]) # print False
+print(hp1 != harry_potter_2) # print True
 
