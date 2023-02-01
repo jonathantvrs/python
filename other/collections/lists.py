@@ -50,4 +50,7 @@ print(ages)
 grades = [6.0, 7.6, 9.8, 10.0]
 print(list(enumerate(grades))) # print [(0, 6.0), (1, 7.6), (2, 9.8), (3, 10.0)]
 # using builtin range to create a list of indexes
-print(list(range(len(grades))))
+print(list(range(len(grades)))) # print [0, 1, 2, 3]
+# iterating 
+for tuple in enumerate(grades):
+    print(tuple)
