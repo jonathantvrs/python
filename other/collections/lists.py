@@ -47,10 +47,24 @@ ages.clear()
 print(ages)
 
 # using builtin enumerate to create a list of tuples -> (index, value)
-grades = [6.0, 7.6, 9.8, 10.0]
+grades = [7.6, 9.8, 10.0, 6.0, 5]
 print(list(enumerate(grades))) # print [(0, 6.0), (1, 7.6), (2, 9.8), (3, 10.0)]
 # using builtin range to create a list of indexes
 print(list(range(len(grades)))) # print [0, 1, 2, 3]
 # iterating 
 for tuple in enumerate(grades):
     print(tuple)
+# unpacking index and value of tuple
+for index, value in enumerate(grades):
+    print(f'Index: {index} - Value {value}')
+
+# sorting list
+print(sorted(grades)) # [5, 6.0, 7.6, 9.8, 10.0]
+# reverse sorting list
+print(sorted(grades, reverse=True)) # [10.0, 9.8, 7.6, 6.0, 5]
+# sorting list with side effect
+grades.sort()
+print(grades)
+# reverse sorting list with side effect
+grades.sort(reverse=True)
+print(grades)
