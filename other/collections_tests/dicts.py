@@ -1,4 +1,4 @@
-from collections import defaultdict
+from collections import Counter, defaultdict
 
 counting_words = {}
 print(type(counting_words))
@@ -25,5 +25,9 @@ counting_words = defaultdict(int)
 for word in text.split():
     counting_words[word] += 1
 
+for k, v in counting_words.items():
+    print(f'key: {k}, value: {v}')
+
+counting_words = Counter(text.split())
 for k, v in counting_words.items():
     print(f'key: {k}, value: {v}')
