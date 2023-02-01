@@ -6,6 +6,15 @@ class Account:
         self.__balance = balance
         self.__limit = limit
 
+    def __eq__(self, other):
+        return self.__number == other.__number
+
+    def __lt__(self, other):
+        return self.__balance < other.__balance
+
+    def __str__(self):
+        return f'Balance: {self.__balance}'
+
     def get_statement(self):
         print("Owner: {}".format(self.__owner))
         print("Balance: {}".format(self.__balance))
@@ -54,3 +63,12 @@ class Account:
     def bank_code():
         return "001"
 
+account1 = Account(10, 'Jonathan', 1.0, 10.0)
+account2 = Account(10, 'Jonathan', 10.0, 10.0)
+
+print(account1 == account2) # print True
+print(account1 < account2) # print True
+
+accounts = [account1, account2]
+for account in sorted(accounts, reverse=True):
+    print(account)
