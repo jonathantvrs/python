@@ -45,3 +45,9 @@ print(ages_in_the_next_year)
 # remove all items from the list 
 ages.clear()
 print(ages)
+
+# using builtin enumerate to create a list of tuples -> (index, value)
+grades = [6.0, 7.6, 9.8, 10.0]
+print(list(enumerate(grades))) # print [(0, 6.0), (1, 7.6), (2, 9.8), (3, 10.0)]
+# using builtin range to create a list of indexes
+print(list(range(len(grades))))
