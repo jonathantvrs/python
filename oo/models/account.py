@@ -1,3 +1,6 @@
+from functools import total_ordering
+
+@total_ordering
 class Account:
     
     def __init__(self, number, owner, balance, limit):
@@ -65,6 +68,8 @@ class Account:
 
 account1 = Account(10, 'Jonathan', 1.0, 10.0)
 account2 = Account(10, 'Jonathan', 10.0, 10.0)
+account3 = Account(10, 'Jonathan', 10.0, 10.0)
+
 
 print(account1 == account2) # print True
 print(account1 < account2) # print True
@@ -72,3 +77,5 @@ print(account1 < account2) # print True
 accounts = [account1, account2]
 for account in sorted(accounts, reverse=True):
     print(account)
+
+print(account2 <= account3) # print True 
