@@ -31,3 +31,5 @@ for k, v in counting_words.items():
 counting_words = Counter(text.split())
 for k, v in counting_words.items():
     print(f'key: {k}, value: {v}')
+
+print(counting_words.most_common(1))
