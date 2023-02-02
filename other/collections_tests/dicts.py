@@ -33,3 +33,9 @@ for k, v in counting_words.items():
     print(f'key: {k}, value: {v}')
 
 print(counting_words.most_common(1))
+
+my_contacts = {'Ary': 123, 'Ana': 456, 'Roberto': 789}
+ana_contacts = {'Joelma': 222, 'Arthur': 444}
+# extending my contacts with ana contacts
+my_contacts.update(ana_contacts)
+print(my_contacts)
