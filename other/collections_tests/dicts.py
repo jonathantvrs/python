@@ -34,8 +34,11 @@ for k, v in counting_words.items():
 
 print(counting_words.most_common(1))
 
-my_contacts = {'Ary': 123, 'Ana': 456, 'Roberto': 789}
-ana_contacts = {'Joelma': 222, 'Arthur': 444}
+my_contacts = {'Ary': '123', 'Ana': '456', 'Roberto': '789'}
+ana_contacts = {'Joelma': '222', 'Arthur': '444'}
 # extending my contacts with ana contacts
 my_contacts.update(ana_contacts)
+print(my_contacts)
+# dict comprehension
+my_contacts = {name: '9' + my_contacts[name] for name in my_contacts}
 print(my_contacts)
