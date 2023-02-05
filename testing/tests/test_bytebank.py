@@ -3,7 +3,6 @@ from pytest import mark
 from testing.code.bytebank import Employee
 
 class TestClass:
-    @mark.skip
     def test_when_age_gets_13_03_2000_returns_23(self):
         employee = Employee('test name', '13/03/2000', 4000)
 
@@ -11,7 +10,6 @@ class TestClass:
 
         assert result == 23
 
-    @mark.skip
     def test_when_surname_gets_Jonathan_Tavares_returns_Tavares(self):
         employee = Employee('Jonathan Tavares', '13/03/2000', 4000)
 
@@ -19,7 +17,6 @@ class TestClass:
 
         assert result == 'Tavares' 
 
-    @mark.skip
     def test_when_salary_decrease_gets_100000_returns_90000(self):
         employee = Employee('Rebs Nogueira', '13/03/2000', 100000)
 
@@ -40,6 +37,6 @@ class TestClass:
         with pytest.raises(Exception):
             employee = Employee('Ana', '13/03/2000', 100000)
 
-            result == employee.calculate_bonus()
+            result = employee.calculate_bonus()
 
             assert result
